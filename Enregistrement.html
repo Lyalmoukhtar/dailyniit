@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="Fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Inscription</title>
+    
+</head>
+<link rel="stylesheet" href="Enregistrement.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<body>
+  
+    <div class="wrapper">
+        <form id="registrationForm">
+            <h1>Inscription</h1>
+            <div class="input-box">
+            <input type="text" placeholder="Prenom" id="prenom" required>
+            </div>
+
+            <div class="input-box">
+                <input type="text" placeholder="Nom" id="nom" required>
+            </div>
+
+            <div class="input-box">
+                <input type="text" placeholder="Adresse" required>
+            </div>
+
+            <div class="input-box">
+            <input type="datetime" placeholder="Date de Naissance" id="datenaiss" required>
+            <i3 class='bx bxs-calendar'></i3>
+            </div>
+
+            <div class="input-box">
+                <input type="text" placeholder="Lieu de Naissance" required>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Nom Utlisateur" required>
+                <i class='bx bxs-user'></i>
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="Mot de passe" id="password" required>
+                <i1 class='bx bxs-lock-alt'></i1>
+                
+            </div>
+
+                       <a href="Authentification.html"><button type="submit" class="btn" onclick="location.href='Authentification.html'">Inscription</button></a>       
+        </form>
+        <p id="message"></p>
+    </div>
+
+    <script>
+              
+              document.getElementById("registrationForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Empêche l'envoi du formulaire pour la validation
+
+        const password = document.getElementById("password").value;
+        const messageElement = document.getElementById("message");
+        var nom=document.getElementById("nom").value;
+        var prenom=document.getElementById("prenom").value;
+        // Vérification des critères
+        const hasUpperCase = /[A-Z]/.test(password); // Au moins une majuscule
+        const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password); // Caractères spéciaux
+        const hasNumber = /\d/.test(password); // Au moins un chiffre
+        const isLongEnough = password.length >= 8; // Longueur minimale de 8 caractères
+
+        // Vérification si tous les critères sont remplis
+        if (hasUpperCase && hasSpecialChar && hasNumber && isLongEnough) {
+          messageElement.textContent = "Mot de passe valide.";
+          messageElement.style.color = "green"; // Affiche le message en vert
+        } else {
+          messageElement.textContent = "Le mot de passe doit contenir :\n" +
+            "- Une majuscule\n" +
+            "- Un caractère spécial\n" +
+            "- Un chiffre\n" +
+            "- Au moins 8 caractères";
+          messageElement.style.color = "red"; // Affiche le message en rouge
+        }
+      
+          //Verifier si le champ"nom" contient uniquement des lettres
+          var rejexNom=/^[a-zA-Z]+$/;
+           if (!rejexNom.test(nom)) {
+            alert("Le champ nom doit contenir uniquement des lettres");
+            return false;//Empeche la soumission du formulaire.
+           }
+             //Verifier si le champ"prenom" contient uniquement des lettres
+             var rejexPrenom=/^[a-zA-Z]+$/;
+           if (!rejexNom.test(prenom)) {
+            alert("Le champ prenom doit contenir uniquement des lettres");
+            return false;//Empeche la soumission du formulaire.
+           }
+        
+       
+      });
+    
+        </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="Fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Authentification</title>
+</head>
+<link rel="stylesheet" href="Authentification.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<body>
+  
+    <div class="wrapper">
+        <form action="">
+            <h1>Authentification</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Nom Utlisateur" required>
+                <i class='bx bxs-user'></i>
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="Mot de passe" required>
+                <i1 class='bx bxs-lock-alt'></i1>
+            </div>
+
+            <div class="remember-forgot">
+                <label><input type="checkbox" onclick="alert('Voulez-vous enregistrer votre mot de passe')">Enregistrer votre Mot de Passe</label>
+            <a href="#">Mot de passe oublie?</a>
+            </div>
+
+            <a href="PagePrincipale.html"><button type="submit"class="btn" onclick="location.href='PagePrincipale.html'" >Connexion</button></a> 
+
+            <div class="register-link">
+            <p>Vous n'avez pas de compte?<a href="Enregistrement.html">Inscrivez-vous</a></p>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+</html>

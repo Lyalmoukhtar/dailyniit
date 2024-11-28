@@ -1,0 +1,84 @@
+.header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color:transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.navbar a{
+    font-size: 20px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 35px;
+    transition: 1s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #00abf0;
+}
+
+body{
+    background-image: url('sbg.jpg');
+    background-position: fixed;
+}
+
+.formulaire{
+    padding: 200px;
+    padding-top: 10px;
+}
+
+fieldset{
+    color: white;
+    background-color:transparent;
+}
+
+legend{
+    text-align: center;
+}
+
+.formulaire .input-box{
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 20%;
+    color: #ededed;
+}
+.formulaire .input-box input{
+ color: black;
+}
+
+.formulaire .btn{
+    width: 100px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .0);
+    cursor: pointer;
+    font-size: 16px;
+    color:white;
+    font-weight: 600;
+    justify-content: space-between;
+}
+
+footer{
+    font-size: 20px;
+    text-align: center;
+    color: #ededed;
+}
